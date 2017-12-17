@@ -1,4 +1,4 @@
-set number
+jset number
 set relativenumber
 
 "get rid of arrows in normal mode
@@ -12,5 +12,9 @@ inoremap <Up> <Nop>
 inoremap <Down> <Nop>
 inoremap <Left> <Nop>
 inoremap <Right> <Nop>
+
+"experimental - map sequence jj to Esc
+imap jj <Esc>
+set timeoutlen=200
 
 nnoremap ,html :-1read $HOME/html.skeleton<CR>2j2f<i
