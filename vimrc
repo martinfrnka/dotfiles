@@ -1,4 +1,4 @@
-jset number
+set number
 set relativenumber
 
 "get rid of arrows in normal mode
