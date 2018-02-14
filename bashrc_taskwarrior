@@ -1,0 +1,38 @@
+#!/bin/bash
+
+export EDITOR="vim"
+
+#Taskwarrior hint for +tags, +@tags & contexts
+alias twh='
+echo "tags:    +next +planning +delegated +waiting +postponed +sometimes";
+echo "places:  +@work +@phone +@errands +@computer +@cyber +@home +@verywhere";
+echo "context: work home fukan errands"'
+
+#Taskwarrior - context and inbox tasks count displayed in prompt
+get_twinfo () {
+    TWCONTEXT='('$(task _get rc.context)') '
+    if [[ "$TWCONTEXT" == '() ' ]]; then
+        TWINBOXCNT='(in: '$(task +in +PENDING count)') '
+        TWCONTEXT=''
+    else
+        TWINBOXCNT=''
+    fi
+}
+
+PROMPT_COMMAND='get_twinfo'
+export PS1='$TWCONTEXT$TWINBOXCNT'$PS1
+
+#Taskwarrior aliases
+alias tl='task list'
+alias in='task add +in'
+
+tickle () {
+    deadline=$1
+    shift
+    in +tickle wait:$deadline $@
+}
+
+alias tick=tickle
+
+alias think='tickle +1d'
+
