@@ -1,0 +1,4 @@
+#!/bin/bash
+
+task syn
+sleep 1
