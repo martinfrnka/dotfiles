@@ -3,10 +3,7 @@
 export EDITOR="vim"
 
 #Taskwarrior hint for +tags, +@tags & contexts
-alias twh='
-echo "tags:    +next +planning +delegated +waiting +postponed +sometimes";
-echo "places:  +@work +@phone +@errands +@computer +@cyber +@home +@verywhere";
-echo "context: work home fukan errands"'
+alias twh='echo "tags:    +next +planning +delegated +waiting +postponed +sometimes"; echo "places:  +@work +@phone +@errands +@computer +@cyber +@home +@verywhere"; echo "context: work home fukan errands"'
 
 #Taskwarrior - context and inbox tasks count displayed in prompt
 get_twinfo () {
@@ -36,3 +33,4 @@ alias tick=tickle
 
 alias think='tickle +1d'
 
+task syn
