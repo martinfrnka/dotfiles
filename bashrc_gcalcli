@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#week and month overview
+alias calw='gcalcli calw'
+alias calm='gcalcli calm'
+
+#daily agenda
+alias cala='gcalcli agenda'
+
+#deleting tasks
+alias caldel='gcalcli delete'
+
+#adding tasks to different calendars
+alias calin='gcalcli --calendar=tw quick'
+alias calprac='gcalcli --calendar=Pracovní quick'
+alias calmf='gcalcli --calendar=martin.frnka@gmail.com quick'
+
+#seaching and editing events
+alias cals='gcalcli search'
+alias cale='gcalcli edit'

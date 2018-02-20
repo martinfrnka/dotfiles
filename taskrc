@@ -44,8 +44,14 @@ report.in.labels=ID,Description
 report.in.filter=status:pending limit:page (+in)
 
 #contexts
-context.work=+@work or +@phone or +@computer or +@cyber or +@verywhere
+context.work=+@work or +@phone or +@computer or +@cyber or +@everywhere
 context.home=+@home or +@phone or +@computer
 context.fukan=+@cyber or +@computer
 context.errands=+@errands
 
+uda.reviewed.type=date
+uda.reviewed.label=Reviewed
+report._reviewed.description=Tasksh review report.  Adjust the filter to your needs.
+report._reviewed.columns=uuid
+report._reviewed.sort=reviewed+,modified+
+report._reviewed.filter=( reviewed.none: or reviewed.before:now-6days ) and ( +PENDING or +WAITING )

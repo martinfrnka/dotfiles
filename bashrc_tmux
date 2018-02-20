@@ -1,0 +1,1 @@
+alias gtdtmux='tmux -f ~/dotfiles/gtd.tmux.conf'
