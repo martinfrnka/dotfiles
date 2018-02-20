@@ -1,0 +1,9 @@
+--military
+--reminder=15m
+--duration=55
+--details=calendar
+--details=location
+--details=length
+--details=reminders
+-w=10
+
