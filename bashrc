@@ -127,3 +127,4 @@ export LESS_TERMCAP_us=$'\e[1;4;31m'
 . ~/dotfiles/bashrc_taskwarrior
 . ~/dotfiles/bashrc_gcalcli
 . ~/dotfiles/bashrc_tmux
+alias xx=". ~/dotfiles/bashrc_taskwarrior_logout; exit"
