@@ -21,7 +21,10 @@ export PS1='$TWCONTEXT$TWINBOXCNT'$PS1
 
 #Taskwarrior aliases
 alias tl='task list'
+alias tn='task'
 alias in='task add +in'
+alias tmod='task modify'
+alias ok='task done'
 
 tickle () {
     deadline=$1
